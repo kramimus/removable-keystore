@@ -12,6 +12,6 @@ gpg-agent &> /dev/null || gpg-agent --daemon --enable-ssh-support \
     --write-env-file "${HOME}/.gpg-agent-info"
 source ~/.gpg-agent-info
 
-keychain --ignore-missing ~/.ssh/*
+eval $(keychain --eval --ignore-missing ~/.ssh/*)
 
 
